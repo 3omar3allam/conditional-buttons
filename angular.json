@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-angular": {
+    "conditional-buttons": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,7 +43,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-angular",
+            "outputPath": "dist/conditional-buttons",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -91,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "test-angular:build:production"
+              "browserTarget": "conditional-buttons:build:production"
             },
             "development": {
-              "browserTarget": "test-angular:build:development"
+              "browserTarget": "conditional-buttons:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,11 +105,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-angular:build"
+            "browserTarget": "conditional-buttons:build"
           }
         }
       }
     }
   },
-  "defaultProject": "test-angular"
+  "defaultProject": "conditional-buttons"
 }
