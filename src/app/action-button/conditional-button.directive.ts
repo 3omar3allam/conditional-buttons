@@ -20,7 +20,7 @@ export class ConditionalButtonDirective implements OnInit, OnDestroy {
             .validatePermission(this.entity, this.action)
             .pipe(takeUntil(this.unsubscribeAll$))
             .subscribe(hasPermission => {
-                this.elRef.nativeElement.disabled = !hasPermission;
+                this.elRef.nativeElement.hidden = !hasPermission;
             });
     }
 
