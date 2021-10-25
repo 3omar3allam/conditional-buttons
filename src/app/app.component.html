@@ -1,66 +1,158 @@
-<div style="text-align:center" class="content">
-    
-<table cellPadding="50">
-    <tbody>
-      <tr>
-        <td>
-            <h2>Users <small>(directive method)</small></h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            {{ActionEnum.Edit}}
-                        </td>
-                        <td>
-                            <button (click)="togglePermissions(EntityEnum.User, ActionEnum.Edit, true)">Add</button>
-                            <button (click)="togglePermissions(EntityEnum.User, ActionEnum.Edit, false)">Remove</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            {{ActionEnum.Delete}}
-                        </td>
-                        <td>
-                            <button (click)="togglePermissions(EntityEnum.User, ActionEnum.Delete, true)">Add</button>
-                            <button (click)="togglePermissions(EntityEnum.User, ActionEnum.Delete, false)">Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <br>
-            <br>
-            <app-users></app-users>
-        </td>
-        <td>
-            <h2>Departments <small>(component method)</small></h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            {{ActionEnum.Edit}}
-                        </td>
-                        <td>
-                            <button (click)="togglePermissions(EntityEnum.Department, ActionEnum.Edit, true)">Add</button>
-                            <button (click)="togglePermissions(EntityEnum.Department, ActionEnum.Edit, false)">Remove</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            {{ActionEnum.Delete}}
-                        </td>
-                        <td>
-                            <button (click)="togglePermissions(EntityEnum.Department, ActionEnum.Delete, true)">Add</button>
-                            <button (click)="togglePermissions(EntityEnum.Department, ActionEnum.Delete, false)">Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <br>
-            <br>
-            <app-departments></app-departments>
-        </td>
-      </tr>
-    </tbody>
-</table>
+<div style="text-align: center" class="content">
+    <div
+        style="
+            width: 800px;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        "
+    >
+        <hierarchy-tree [data]="TEST"></hierarchy-tree>
+    </div>
+
+    <table cellPadding="50">
+        <tbody>
+            <tr>
+                <td>
+                    <h2>Users <small>(directive method)</small></h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {{ ActionEnum.Edit }}
+                                </td>
+                                <td>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.User,
+                                                ActionEnum.Edit,
+                                                true
+                                            )
+                                        "
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.User,
+                                                ActionEnum.Edit,
+                                                false
+                                            )
+                                        "
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{ ActionEnum.Delete }}
+                                </td>
+                                <td>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.User,
+                                                ActionEnum.Delete,
+                                                true
+                                            )
+                                        "
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.User,
+                                                ActionEnum.Delete,
+                                                false
+                                            )
+                                        "
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <br />
+                    <br />
+                    <app-users></app-users>
+                </td>
+                <td>
+                    <h2>Departments <small>(component method)</small></h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {{ ActionEnum.Edit }}
+                                </td>
+                                <td>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.Department,
+                                                ActionEnum.Edit,
+                                                true
+                                            )
+                                        "
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.Department,
+                                                ActionEnum.Edit,
+                                                false
+                                            )
+                                        "
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{ ActionEnum.Delete }}
+                                </td>
+                                <td>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.Department,
+                                                ActionEnum.Delete,
+                                                true
+                                            )
+                                        "
+                                    >
+                                        Add
+                                    </button>
+                                    <button
+                                        (click)="
+                                            togglePermissions(
+                                                EntityEnum.Department,
+                                                ActionEnum.Delete,
+                                                false
+                                            )
+                                        "
+                                    >
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <br />
+                    <br />
+                    <app-departments></app-departments>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

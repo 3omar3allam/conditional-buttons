@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output } from "@angular/core";
+import { Directive, ElementRef, Input, OnDestroy, OnInit } from "@angular/core";
 import { Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 import { PermissionService } from "../permission.service";

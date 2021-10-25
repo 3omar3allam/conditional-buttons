@@ -1,0 +1,20 @@
+<li class="treeNode" [ngClass]="level != 0 ? 'border-left':''" *ngIf="node?.render">
+    <div class="nodeStart">
+        <div class="nodeTail" [hidden]="level == 0"></div>
+    </div>
+    <div class="nodeContent">
+        <img class="nodeImage" [src]="node.photoUrl ?? 'assets/person.jpg'" />
+        <div [hidden]="!expand" class="nodeText">
+            <b>{{ node.name }}</b>
+            <span> {{ node.description }}</span>
+        </div>
+    </div>
+    <div class="nodeEnd">
+        <div class="nodeTail"></div>
+        <div class="nodeSuffix">{{ node.numChildren }}</div>
+        <div
+            class="nodeTail"
+            [hidden]="!isActive || node.numChildren == 0"
+        ></div>
+    </div>
+</li>

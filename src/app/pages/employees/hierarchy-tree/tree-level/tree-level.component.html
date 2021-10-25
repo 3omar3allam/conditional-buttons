@@ -1,0 +1,5 @@
+<ul class="levelContainer">
+    <ng-container *ngFor="let node of levelNodes">
+        <tree-node [node]="node" [level]="level" [isActive]="activeNodeId == node.id" [expand]="level != 0" ></tree-node>
+    </ng-container>
+</ul>

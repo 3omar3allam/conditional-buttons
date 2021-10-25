@@ -8,6 +8,9 @@ import { ConditionalButtonDirective } from './action-button/conditional-button.d
 import { AppComponent } from './app.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { UsersComponent } from './pages/users/users.component';
+import { TreeNodeComponent } from './pages/employees/hierarchy-tree/tree-node/tree-node.component';
+import { TreeLevelComponent } from './pages/employees/hierarchy-tree/tree-level/tree-level.component';
+import { HierarchyTreeComponent } from './pages/employees/hierarchy-tree/hierarchy-tree.component';
 
 const routes : Route[] = [
   { path: 'users', component: UsersComponent },
@@ -21,6 +24,9 @@ const routes : Route[] = [
     DepartmentsComponent,
     ActionButtonComponent,
     ConditionalButtonDirective,
+    TreeNodeComponent,
+    TreeLevelComponent,
+    HierarchyTreeComponent,
   ],
   imports: [
     FormsModule,

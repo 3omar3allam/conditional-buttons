@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.treeNode {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0px;
+
+    &.border-left {
+        border-left: 1px solid #DADADA;
+    }
+
+    .nodeContent {
+        border: 1px solid #DADADA;
+        border-radius: 28px;
+        padding: 2;
+        display: flex;
+        align-items: center;
+        
+        .nodeImage {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #DADADA;
+        }
+        .nodeText {
+            padding-left: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-around;
+            width: 250px;
+
+            & > * {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 230px;
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    .nodeStart, .nodeEnd {
+        display: flex;
+        align-items: center;
+
+        .nodeTail {
+            height: 1px;
+            width: 15px;
+            background-color: #DADADA;
+        }
+        
+        .nodeSuffix {
+            margin: 0;
+            padding: 0 2px;
+            border: 1px solid #DADADA;
+            border-radius: 2px;
+            font-size: 0.7em;
+        }
+    }
+}

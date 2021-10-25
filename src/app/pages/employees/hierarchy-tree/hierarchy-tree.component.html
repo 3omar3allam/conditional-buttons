@@ -1,0 +1,5 @@
+<div class="treeContainer">
+    <ng-container *ngFor="let level of data; let i = index">
+        <tree-level [level]="i" [levelNodes]="level" [activeNodeId]="1"></tree-level>
+    </ng-container>
+</div>
